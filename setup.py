@@ -18,8 +18,12 @@ setup(name='modifeatures',
       zip_safe=False,
       install_requires=[
         'psycopg2',
+        'pyramid',
+        'PasteDeploy'
       ],
-      entry_points="""
-      # -*- Entry points: -*-
-      """,
+      entry_points={
+        'paste.app_factory': [
+            'main=modifeatures:app_factory'
+            ]
+        },
       )
